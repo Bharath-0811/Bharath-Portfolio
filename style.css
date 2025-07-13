@@ -948,17 +948,44 @@ html {
 }
 
 @media (max-width: 768px) {
-  nav ul {
+  .nav-toggle {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
+    cursor: pointer;
   }
 
-  nav li {
+  .nav-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 3px;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #5D5FEF; /* Match your current navbar background */
+    position: absolute;
+    top: 60px;
+    right: 0;
     width: 100%;
     text-align: center;
+    z-index: 10;
+    padding: 10px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 10px 0;
+  }
+
+  .nav-link {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
   }
 }
